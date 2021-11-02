@@ -1,0 +1,400 @@
+TimeQuest Timing Analyzer report for router_fsm
+Mon Nov 01 21:26:30 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clock'
+ 12. Hold: 'clock'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; router_fsm                                          ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M40ZE64C4                                          ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 150.74 MHz ; 150.74 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -5.634 ; -46.651       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 2.863 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clock'                                                                                                                     ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -5.634 ; temp[0]                  ; state.LOAD_PARITY        ; clock        ; clock       ; 1.000        ; 0.000      ; 6.374      ;
+; -5.033 ; temp[0]                  ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.773      ;
+; -5.032 ; temp[0]                  ; state.CHECK_PARITY_ERROR ; clock        ; clock       ; 1.000        ; 0.000      ; 5.772      ;
+; -5.030 ; temp[0]                  ; state.LOAD_AFTER_FULL    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.770      ;
+; -5.025 ; temp[0]                  ; state.DECODE_ADDRESS     ; clock        ; clock       ; 1.000        ; 0.000      ; 5.765      ;
+; -4.770 ; temp[1]                  ; state.LOAD_PARITY        ; clock        ; clock       ; 1.000        ; 0.000      ; 5.510      ;
+; -4.733 ; temp[1]                  ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.473      ;
+; -4.461 ; temp[0]                  ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.201      ;
+; -4.458 ; temp[0]                  ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.198      ;
+; -4.312 ; state.FIFO_FULL_STATE    ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.052      ;
+; -4.286 ; state.DECODE_ADDRESS     ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 1.000        ; 0.000      ; 5.026      ;
+; -4.242 ; temp[1]                  ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.982      ;
+; -4.169 ; temp[1]                  ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.909      ;
+; -4.168 ; temp[1]                  ; state.CHECK_PARITY_ERROR ; clock        ; clock       ; 1.000        ; 0.000      ; 4.908      ;
+; -4.166 ; temp[1]                  ; state.LOAD_AFTER_FULL    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.906      ;
+; -4.161 ; temp[1]                  ; state.DECODE_ADDRESS     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.901      ;
+; -4.051 ; state.LOAD_AFTER_FULL    ; state.LOAD_DATA          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.791      ;
+; -4.046 ; state.LOAD_AFTER_FULL    ; state.LOAD_PARITY        ; clock        ; clock       ; 1.000        ; 0.000      ; 4.786      ;
+; -4.005 ; state.LOAD_AFTER_FULL    ; state.DECODE_ADDRESS     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.745      ;
+; -3.892 ; state.CHECK_PARITY_ERROR ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.632      ;
+; -3.841 ; state.DECODE_ADDRESS     ; state.DECODE_ADDRESS     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.581      ;
+; -3.826 ; state.DECODE_ADDRESS     ; temp[1]                  ; clock        ; clock       ; 1.000        ; 0.000      ; 4.566      ;
+; -3.826 ; state.DECODE_ADDRESS     ; temp[0]                  ; clock        ; clock       ; 1.000        ; 0.000      ; 4.566      ;
+; -3.794 ; state.DECODE_ADDRESS     ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.534      ;
+; -3.642 ; state.CHECK_PARITY_ERROR ; state.DECODE_ADDRESS     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.382      ;
+; -3.612 ; state.LOAD_FIRST_DATA    ; state.LOAD_DATA          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.352      ;
+; -3.589 ; temp[0]                  ; state.LOAD_DATA          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.329      ;
+; -3.482 ; temp[1]                  ; state.LOAD_DATA          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.222      ;
+; -3.418 ; state.LOAD_DATA          ; state.LOAD_DATA          ; clock        ; clock       ; 1.000        ; 0.000      ; 4.158      ;
+; -3.413 ; state.LOAD_DATA          ; state.LOAD_PARITY        ; clock        ; clock       ; 1.000        ; 0.000      ; 4.153      ;
+; -3.284 ; state.LOAD_DATA          ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.024      ;
+; -2.822 ; state.WAIT_TILL_EMPTY    ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 1.000        ; 0.000      ; 3.562      ;
+; -2.468 ; state.LOAD_PARITY        ; state.CHECK_PARITY_ERROR ; clock        ; clock       ; 1.000        ; 0.000      ; 3.208      ;
+; -2.287 ; state.WAIT_TILL_EMPTY    ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 1.000        ; 0.000      ; 3.027      ;
+; -2.197 ; state.FIFO_FULL_STATE    ; state.LOAD_AFTER_FULL    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.937      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clock'                                                                                                                     ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; 2.863 ; state.FIFO_FULL_STATE    ; state.LOAD_AFTER_FULL    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.937      ;
+; 2.953 ; state.WAIT_TILL_EMPTY    ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.027      ;
+; 3.134 ; state.LOAD_PARITY        ; state.CHECK_PARITY_ERROR ; clock        ; clock       ; 0.000        ; 0.000      ; 3.208      ;
+; 3.488 ; state.WAIT_TILL_EMPTY    ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.562      ;
+; 3.710 ; temp[0]                  ; state.LOAD_DATA          ; clock        ; clock       ; 0.000        ; 0.000      ; 3.784      ;
+; 3.717 ; temp[0]                  ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.791      ;
+; 3.899 ; temp[1]                  ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 0.000        ; 0.000      ; 3.973      ;
+; 3.950 ; state.LOAD_DATA          ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.024      ;
+; 4.079 ; state.LOAD_DATA          ; state.LOAD_PARITY        ; clock        ; clock       ; 0.000        ; 0.000      ; 4.153      ;
+; 4.081 ; temp[0]                  ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.155      ;
+; 4.084 ; state.LOAD_DATA          ; state.LOAD_DATA          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.158      ;
+; 4.148 ; temp[1]                  ; state.LOAD_DATA          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.222      ;
+; 4.263 ; temp[1]                  ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.337      ;
+; 4.278 ; state.LOAD_FIRST_DATA    ; state.LOAD_DATA          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.352      ;
+; 4.308 ; state.CHECK_PARITY_ERROR ; state.DECODE_ADDRESS     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.382      ;
+; 4.460 ; state.DECODE_ADDRESS     ; state.LOAD_FIRST_DATA    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.534      ;
+; 4.492 ; state.DECODE_ADDRESS     ; temp[1]                  ; clock        ; clock       ; 0.000        ; 0.000      ; 4.566      ;
+; 4.492 ; state.DECODE_ADDRESS     ; temp[0]                  ; clock        ; clock       ; 0.000        ; 0.000      ; 4.566      ;
+; 4.507 ; state.DECODE_ADDRESS     ; state.DECODE_ADDRESS     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.581      ;
+; 4.558 ; state.CHECK_PARITY_ERROR ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.632      ;
+; 4.645 ; temp[0]                  ; state.DECODE_ADDRESS     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.719      ;
+; 4.650 ; temp[0]                  ; state.LOAD_AFTER_FULL    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.724      ;
+; 4.652 ; temp[0]                  ; state.CHECK_PARITY_ERROR ; clock        ; clock       ; 0.000        ; 0.000      ; 4.726      ;
+; 4.653 ; temp[0]                  ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.727      ;
+; 4.671 ; state.LOAD_AFTER_FULL    ; state.DECODE_ADDRESS     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.745      ;
+; 4.712 ; state.LOAD_AFTER_FULL    ; state.LOAD_PARITY        ; clock        ; clock       ; 0.000        ; 0.000      ; 4.786      ;
+; 4.717 ; state.LOAD_AFTER_FULL    ; state.LOAD_DATA          ; clock        ; clock       ; 0.000        ; 0.000      ; 4.791      ;
+; 4.827 ; temp[1]                  ; state.DECODE_ADDRESS     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.901      ;
+; 4.832 ; temp[1]                  ; state.LOAD_AFTER_FULL    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.906      ;
+; 4.834 ; temp[1]                  ; state.CHECK_PARITY_ERROR ; clock        ; clock       ; 0.000        ; 0.000      ; 4.908      ;
+; 4.835 ; temp[1]                  ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 0.000        ; 0.000      ; 4.909      ;
+; 4.952 ; state.DECODE_ADDRESS     ; state.WAIT_TILL_EMPTY    ; clock        ; clock       ; 0.000        ; 0.000      ; 5.026      ;
+; 4.978 ; state.FIFO_FULL_STATE    ; state.FIFO_FULL_STATE    ; clock        ; clock       ; 0.000        ; 0.000      ; 5.052      ;
+; 5.254 ; temp[0]                  ; state.LOAD_PARITY        ; clock        ; clock       ; 0.000        ; 0.000      ; 5.328      ;
+; 5.436 ; temp[1]                  ; state.LOAD_PARITY        ; clock        ; clock       ; 0.000        ; 0.000      ; 5.510      ;
++-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 52       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 52       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 66    ; 66   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 11    ; 11   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clock  ; clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; data_in[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_empty_0     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_empty_1     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_empty_2     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_full        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; low_packet_valid ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; parity_done      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pkt_valid        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resetn           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; soft_reset_0     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; soft_reset_1     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; soft_reset_2     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; busy          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; detect_add    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; full_state    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; laf_state     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ld_state      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lfd_state     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_int_reg   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_enb_reg ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; data_in[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_empty_0     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_empty_1     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_empty_2     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fifo_full        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; low_packet_valid ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; parity_done      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pkt_valid        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resetn           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; soft_reset_0     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; soft_reset_1     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; soft_reset_2     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; busy          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; detect_add    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; full_state    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; laf_state     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ld_state      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lfd_state     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_int_reg   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_enb_reg ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Nov 01 21:26:29 2021
+Info: Command: quartus_sta router_fsm -c router_fsm
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'router_fsm.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.634
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.634             -46.651 clock 
+Info (332146): Worst-case hold slack is 2.863
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.863               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4669 megabytes
+    Info: Processing ended: Mon Nov 01 21:26:30 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

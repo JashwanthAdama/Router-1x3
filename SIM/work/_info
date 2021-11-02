@@ -1,0 +1,220 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Maven Silicon/Verilog_labs/Assignments/Assignment 4/down counter/sim
+vrouter_fifo
+Z0 !s110 1635781887
+!i10b 1
+!s100 ileiDEhNagz;5FIZc8ILD2
+Ii1<1IzVgVPZgTR@jHf^G20
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Maven Silicon/Verilog_labs/Router Project/SIM
+w1635609925
+8D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fifo.v
+FD:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fifo.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1635781887.000000
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fifo.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vrouter_fifo_tb
+R0
+!i10b 1
+!s100 m=<Jn7oU2zRIgZ6[P`nWM2
+IbTa<Gg5^0eaTNGm>N39:51
+R1
+R2
+w1635776483
+8D:/Maven Silicon/Verilog_labs/Router Project/TB/router_fifo_tb.v
+FD:/Maven Silicon/Verilog_labs/Router Project/TB/router_fifo_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/TB/router_fifo_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/TB/router_fifo_tb.v|
+!i113 1
+R5
+R6
+vrouter_fsm
+R0
+!i10b 1
+!s100 ;D[8Bm1zUY@7PdgZE:79S1
+I1z>@kEKE6iLBMRK^FeiMF1
+R1
+R2
+w1635778084
+8D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fsm.v
+FD:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fsm.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fsm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_fsm.v|
+!i113 1
+R5
+R6
+vrouter_fsm_tb
+Z7 !s110 1635781888
+!i10b 1
+!s100 Z`^]3jYiQ]H`kfK=67k;50
+I4D>z0g1SC]1Tdni^jimLl2
+R1
+R2
+w1635778143
+8D:/Maven Silicon/Verilog_labs/Router Project/TB/router_fsm_tb.v
+FD:/Maven Silicon/Verilog_labs/Router Project/TB/router_fsm_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/TB/router_fsm_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/TB/router_fsm_tb.v|
+!i113 1
+R5
+R6
+vrouter_reg
+R7
+!i10b 1
+!s100 AVVoX_P?3oIT_WboU>c2Z2
+IFnN@@n5K@d>XNOE?iN7V@1
+R1
+R2
+w1635780660
+8D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_reg.v
+FD:/Maven Silicon/Verilog_labs/Router Project/RTL/router_reg.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1635781888.000000
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_reg.v|
+!i113 1
+R5
+R6
+vrouter_reg_tb
+R7
+!i10b 1
+!s100 7@A;WbLdLozE4z3IWfG451
+IDZNJB?`F5H92B^oY0>AYJ2
+R1
+R2
+w1635614324
+8D:/Maven Silicon/Verilog_labs/Router Project/TB/router_reg_tb.v
+FD:/Maven Silicon/Verilog_labs/Router Project/TB/router_reg_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/TB/router_reg_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/TB/router_reg_tb.v|
+!i113 1
+R5
+R6
+vrouter_sync
+R0
+!i10b 1
+!s100 eN;][]h19SE_^H>?ao<L21
+IBJN?J2fXUi0O47JVUnoTJ3
+R1
+R2
+w1635777562
+8D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_sync.v
+FD:/Maven Silicon/Verilog_labs/Router Project/RTL/router_sync.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_sync.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_sync.v|
+!i113 1
+R5
+R6
+vrouter_sync_tb
+R0
+!i10b 1
+!s100 O75czHaLkFJC>D9bP5aD53
+IiGz71<5zzBgR>D^YTNGSI0
+R1
+R2
+w1635777665
+8D:/Maven Silicon/Verilog_labs/Router Project/TB/router_sync_tb.v
+FD:/Maven Silicon/Verilog_labs/Router Project/TB/router_sync_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/TB/router_sync_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/TB/router_sync_tb.v|
+!i113 1
+R5
+R6
+vrouter_top
+!s110 1635781890
+!i10b 1
+!s100 `U23GMdig^nC9N3>lV@N]3
+IaoCT^F_<?WiZXUX9b<<kD3
+R1
+R2
+w1635781222
+8D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_top.v
+FD:/Maven Silicon/Verilog_labs/Router Project/RTL/router_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1635781890.000000
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/RTL/router_top.v|
+!i113 1
+R5
+R6
+vrouter_top_tb
+R7
+!i10b 1
+!s100 K@YWILjNdU30?U9P2k66`2
+I;enZ>eKC1z[;<H3?0]MO=1
+R1
+R2
+w1635781295
+8D:/Maven Silicon/Verilog_labs/Router Project/TB/router_top_tb.v
+FD:/Maven Silicon/Verilog_labs/Router Project/TB/router_top_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/Maven Silicon/Verilog_labs/Router Project/TB/router_top_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Maven Silicon/Verilog_labs/Router Project/TB/router_top_tb.v|
+!i113 1
+R5
+R6
